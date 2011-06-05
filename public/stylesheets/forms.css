@@ -37,7 +37,15 @@ form fieldset {
 	clear: both;
 	margin: 0 0 20px 0;
 	padding: 0;
-	border: 0;
+	border-width: 1px 0 0 1px;
+  border-color: #eee #fff;
+  border-style: solid;
+}
+
+form fieldset legend {
+  font-size: 16px;
+  margin: 10px 0 10px 20px;
+  padding: 0 10px;
 }
 
 /*
@@ -47,7 +55,7 @@ labels and wrappers
 
 /*form.dm_form label {*/
 form label {
-	margin: 0 1%;
+	margin: 5px 1%;
 	padding: 0;
 	border: 0;
 	float: left;
@@ -114,9 +122,9 @@ errors
 /*form.dm_form label.error input.field,
 form.dm_form label.error select.field,
 form.dm_form label.error textarea.field {*/
-form label.error input.field,
-form label.error select.field,
-form label.error textarea.field {
+form label .fieldWithErrors input,
+form label .fieldWithErrors select,
+form label .fieldWithErrors textarea {
 	border-color: #dd1100;
 }
 
@@ -147,9 +155,9 @@ input/select fields
 /*form.dm_form label input.field,
 form.dm_form label select.field,
 form.dm_form label textarea.field {*/
-form label input.field,
-form label select.field,
-form label textarea.field {
+form label input,
+form label select,
+form label textarea {
 	width: 100%;
 	display: block;
 	border: 1px solid #d0d6da;
@@ -164,7 +172,7 @@ form label textarea.field {
 }
 
 /*form.dm_form label select.field {*/
-form label select.field {
+form label select {
 	padding: 4px 1px 1px 1px; /* have to try out */
 }
 
@@ -184,17 +192,24 @@ form label textarea.field:focus {
 /*form.dm_form label.mandatory input.field,
 form.dm_form label.mandatory select.field,
 form.dm_form label.mandatory textarea.field {*/
-form label.mandatory input.field,
-form label.mandatory select.field,
-form label.mandatory textarea.field {
+form label.mandatory input,
+form label.mandatory select,
+form label.mandatory textarea {
 	border: 1px solid #809db5;
 	border-left: 8px solid #809db5;
+}
+
+form label.mandatory .fieldWithErrors input,
+form label.mandatory .fieldWithErrors select,
+form label.mandatory .fieldWithErrors textarea {
+	border: 1px solid #dd1100;
+	border-left: 8px solid #dd1100;
 }
 
 /* Kalenderfelder
 	calendar fields */
 /*form.dm_form label.calendar input.field {*/
-form label.calendar input.field {
+form label.calendar input {
 	padding-right: 25px;
 }
 
